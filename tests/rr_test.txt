@@ -1,0 +1,9 @@
+new
+new
+ps
+tick
+tick
+tick
+ps
+kill 1
+ps
