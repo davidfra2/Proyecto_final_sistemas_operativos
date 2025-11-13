@@ -1,6 +1,6 @@
 # Simulador de Kernel - Sistemas Operativos
 
-## 📋 Descripción General
+## Descripción General
 
 Este proyecto implementa un **simulador de kernel educativo** que demuestra los conceptos fundamentales de un sistema operativo moderno. Incluye simulación de:
 
@@ -13,7 +13,7 @@ Es una herramienta didáctica para entender cómo los sistemas operativos modern
 
 ---
 
-## 🏗️ Arquitectura del Kernel
+## Arquitectura del Kernel
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -56,7 +56,7 @@ proyecto_final_sistemas_operativos/
 
 ---
 
-## 🔧 Componentes Principales
+## Componentes Principales
 
 ### 1. **Módulo CPU - Planificación Round Robin**
 
@@ -227,7 +227,7 @@ cv.notify_all();
 
 ---
 
-## 💻 Guía de Uso
+## Guía de Uso
 
 ### Compilación
 
@@ -348,7 +348,7 @@ Consumed item 2, buffer size 2
 
 ---
 
-## 📊 Análisis de Algoritmos
+## Análisis de Algoritmos
 
 ### Comparativa de Planificadores
 
@@ -377,48 +377,7 @@ Quantum = 100 (muy grande):
 ├─ Similar a FCFS
 └─ Algunos procesos esperan demasiado
 ```
-
----
-
-## 🎯 Casos de Uso Educativos
-
-### Caso 1: Entender Preemption
-
-```bash
-kernel> new
-kernel> new
-kernel> new
-kernel> run 3
-# Observe cómo cada proceso se ejecuta 4 ticks
-# y luego es desplazado por otro
-```
-
-### Caso 2: Visualizar Fallo de Página
-
-```bash
-kernel> mem 1,2,3,4,5,1,2,3
-# Página 1: miss (frames: [1])
-# Página 2: miss (frames: [2,1])
-# Página 3: miss (frames: [3,2,1])
-# Página 4: miss, evicta 1 (frames: [4,3,2])
-# Página 5: miss, evicta 2 (frames: [5,4,3])
-# Página 1: miss, evicta 3 (frames: [1,5,4])
-# Página 2: miss, evicta 4 (frames: [2,1,5])
-# Página 3: miss, evicta 5 (frames: [3,2,1])
-```
-
-### Caso 3: Race Condition en Sincronización
-
-```bash
-kernel> produce 10
-kernel> consume 10
-# El buffer se mantiene sincronizado
-# Sin overflow ni underflow
-```
-
----
-
-## 🔬 Complejidad Computacional
+## Complejidad Computacional
 
 | Operación | Complejidad | Notas |
 |-----------|------------|-------|
@@ -431,7 +390,7 @@ kernel> consume 10
 
 ---
 
-## 📚 Conceptos Teóricos
+## Conceptos Teóricos
 
 ### Process Control Block (PCB)
 
@@ -464,37 +423,7 @@ Tiempo: 3 → 4
 
 ---
 
-## 🐛 Limitaciones y Mejoras Futuras
-
-### Limitaciones Actuales
-
-- ❌ Sin gestión de memoria real
-- ❌ Sin archivos E/S
-- ❌ Sin interrupciones simuladas
-- ❌ Sin prioridades de procesos
-
-### Mejoras Futuras
-
-```
-Prioridad 1:
-├─ Implementar FIFO y SJF como comparación
-├─ Agregar métricas (turnover time, waiting time)
-└─ Gráficos de Gantt
-
-Prioridad 2:
-├─ Paging con multiple niveles
-├─ Segmentación de memoria
-└─ Tabla de páginas multinivel
-
-Prioridad 3:
-├─ Interrupciones de hardware
-├─ Manejo de excepciones
-└─ Sistema de archivos virtual
-```
-
----
-
-## 📖 Referencias
+## Referencias
 
 ### Libros Recomendados
 - **Operating System Concepts** - Silberschatz, Galvin, Gagne
@@ -507,15 +436,3 @@ Prioridad 3:
 - [Producer-Consumer Problem](https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem)
 
 ---
-
-## 👨‍💻 Autor
-
-Proyecto de **Sistemas Operativos** - 2025
-
-## 📝 Licencia
-
-Este proyecto es de código abierto con propósitos educativos.
-
----
-
-**Última actualización**: Noviembre 2025
